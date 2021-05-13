@@ -1,24 +1,25 @@
+document.getElementById("pyrheight").addEventListener("click", printPyramid);
 
-printPyramid(5);
+//printPyramid(5);
 
+function printPyramid(height) {
 
-let rows = 5
+let rows = document.getElementById("height").value;
 
 let str = '';
 
 
 for ( let i = 1; i <= rows; i++){  
   str = "";
-  for( let j = 4; j < rows-1; j++)
+  for( let j = 1; j < rows-1; j++)
   {
-    str += " ";
+    str += ".";
   }
-  for ( j = rows-i; j <= 5; j++ )
+  for ( j = rows-i; j <= rows; j++ )
   {
     str += "#"; 
   }
   
-
   console.log(str)
 
   var para = document.createElement("p");
@@ -27,14 +28,11 @@ for ( let i = 1; i <= rows; i++){
   var element = document.getElementById("pyramid");
   element.appendChild(para);
   }
+
+}
 // i = i +1;
 // i++;
 
-function printPyramid(height) {
-    console.log("Uh oh... the pyramid is under construction.");
-    console.log("Check back soon, our developers are hard at work as we speak!");
-
-}
 
 //just an example
 
