@@ -11,7 +11,7 @@ let str = '';
 
 for ( let i = 1; i <= rows; i++){  
   str = "";
-  for( let j = 1; j < rows-1; j++)
+  for( let j = 0; j < rows-i; j++)
   {
     str += ".";
   }
